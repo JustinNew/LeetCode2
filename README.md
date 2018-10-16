@@ -10,3 +10,6 @@
   - 239 Sliding Window Maximum
     - Deque is your friend
     - Keep a non-increase deque of maximum
+
+  - 146 LRU Cache
+    - Insert and remove O(1) -> Double Linked List
