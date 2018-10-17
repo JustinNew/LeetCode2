@@ -11,10 +11,8 @@ Input: [0,1,0,2,1,0,1,3,2,1,2,1]
 Output: 6
 '''
 
-'''
-Use two array to track left max and right max.
-Water for i is min(max_l, max_r) - n_i.
-'''
+# Use two array to track left max and right max.
+# Water for i is min(max_l, max_r) - n_i.
 
 class Solution:
     def trap(self, height):
