@@ -32,6 +32,8 @@ Input: "{[]}"
 Output: true
 '''
 
+# Use stack
+
 class Solution:
     def isValid(self, s):
         """
