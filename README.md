@@ -13,3 +13,7 @@
 
   - 146 LRU Cache
     - Insert and remove O(1) -> Double Linked List
+
+  - 10 Regular Expression Matching
+    - Carefull about the logic
+    - 2-D DP
