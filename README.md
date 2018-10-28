@@ -17,3 +17,7 @@
   - 10 Regular Expression Matching
     - Carefull about the logic
     - 2-D DP
+
+  - 239 Sliding Window Maximum
+    - Use deque
+    - Keep decreasing max
