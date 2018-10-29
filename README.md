@@ -21,3 +21,7 @@
   - 239 Sliding Window Maximum
     - Use deque
     - Keep decreasing max
+
+  - 312 Burst Balloons
+    - Dynamic programming
+    - O(N^3)
