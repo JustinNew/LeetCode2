@@ -25,3 +25,9 @@
   - 312 Burst Balloons
     - Dynamic programming
     - O(N^3)
+
+  - 336 Palindrome Pairs
+    - Use dictionary
+    - Very tricky
+      - Check all prefixes, if any prefix is palindrome and its remaining string reversed is in the word list, then score.
+      - Check all suffixes, if any suffix is palindrome and its remaining string reversed is in the word list, then score.
