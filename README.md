@@ -31,3 +31,12 @@
     - Very tricky
       - Check all prefixes, if any prefix is palindrome and its remaining string reversed is in the word list, then score.
       - Check all suffixes, if any suffix is palindrome and its remaining string reversed is in the word list, then score.
+
+  - 140. Word Break II
+    - DP, bottom up
+      - Memory limit exceeded
+    - Recursion + Dictionary == Dynamic Programming, top down, only call recursively when inDict is true
+      - wordBreak('catsanddo') + inDict('g')
+      - U wordBreak('catsandd') + inDict('og')
+      - U ...
+      - U wordBreak('') + inDict('catsanddog')
