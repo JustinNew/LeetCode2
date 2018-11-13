@@ -1,6 +1,6 @@
 # 146. LRU Cache
 
-# Google Tag
+# Facebook Tag
 
 '''
 Design and implement a data structure for Least Recently Used (LRU) cache. It should support the following operations: get and put.
@@ -27,29 +27,28 @@ cache.get(4);       // returns 4
 '''
 
 class LRUCache:
-
+    
     def __init__(self, capacity):
         """
         :type capacity: int
         """
-
         from collections import deque
+        
+        self.n = capacity
         self.d = {}
-        self.l = capacity
-        self.q = deque()
+        self.s = deque()
 
     def get(self, key):
         """
         :type key: int
         :rtype: int
         """
-        
         if key in self.d:
-            self.q.remove(key)
-            self.q.append(key)
+            self.s.remove(key)
+            self.s.append(key)
             return self.d[key]
         else:
-            return -1
+            return -1  
 
     def put(self, key, value):
         """
@@ -57,37 +56,15 @@ class LRUCache:
         :type value: int
         :rtype: void
         """
-
-        self.d[key] = value
-            
-        if key in self.q:
-            self.q.remove(key)
-        elif len(self.q) == self.l:
-            t = self.q.popleft()
-            self.d.pop(t)
-        self.q.append(key)
-
-        return
-
-    ################################################################################################
-    # O(1)
-
-    def __init__(self, capacity):
-        """
-        :type capacity: int
-        """
-        
-
-    def get(self, key):
-        """
-        :type key: int
-        :rtype: int
-        """
-        
-
-    def put(self, key, value):
-        """
-        :type key: int
-        :type value: int
-        :rtype: void
-        """
+        if key in self.d:
+            self.d[key] = value
+            self.s.remove(key)
+            self.s.append(key)
+            return 
+        else:
+            if len(self.s) == self.n:
+                t = self.s.popleft()
+                self.d.pop(t)
+            self.d[key] = value
+            self.s.append(key)
+            return
